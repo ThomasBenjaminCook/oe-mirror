@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 from typing import Any, List
 
 import httpx
+import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 
@@ -134,3 +135,7 @@ async def get_average_price() -> dict[str, Any]:
 @app.get("/")
 async def root() -> dict[str, str]:
     return {"message": "Use /average-price to fetch the latest NSW average price"}
+
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=False)
