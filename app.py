@@ -43,7 +43,7 @@ def _get_auth_header() -> dict[str, str]:
 def _time_window_minutes(minutes: int = 30) -> tuple[str, str]:
     """Return naive (date_start, date_end) ISO strings in network local time (AEST/AEDT)."""
     tz = ZoneInfo("Australia/Sydney")
-    end_dt = datetime.now(tz) - timedelta(minutes=60)
+    end_dt = datetime.now(tz) - timedelta(minutes=30)
     start_dt = end_dt - timedelta(minutes=minutes)
     # API expects timezone-naive timestamps in network local time.
     end_local = end_dt.replace(tzinfo=None)
