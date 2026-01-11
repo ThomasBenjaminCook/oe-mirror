@@ -44,3 +44,9 @@ Disable on boot:
 ```bash
 sudo systemctl disable open-electricity.service
 ```
+
+Restart after updating the scripts:
+
+```bash
+sudo systemctl restart open-electricity.service
+```
