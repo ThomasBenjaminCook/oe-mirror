@@ -5,9 +5,10 @@ After=network.target
 [Service]
 Type=simple
 User=tom
-WorkingDirectory=/home/tom/test_oe_api
-EnvironmentFile=/home/tom/test_oe_api/.env
-ExecStart=/home/tom/test_oe_api/.venv/bin/python /home/tom/test_oe_api/app.py
+WorkingDirectory=/home/tom/oe-mirror
+EnvironmentFile=/home/tom/oe-mirror/.env
+ExecStart=/home/tom/oe-mirror/.venv/bin/python /home/tom/oe-mirror/app.py
+Environment=PYTHONUNBUFFERED=1
 Restart=on-failure
 RestartSec=5
 

@@ -5,7 +5,7 @@
 Copy service file it into systemd:
 
 ```bash
-sudo cp /home/tom/test_oe_api/open-electricity.service /etc/systemd/system/open-electricity.service
+sudo cp /home/tom/oe-mirror/open-electricity.service /etc/systemd/system/open-electricity.service
 ```
 
 Reload units:
