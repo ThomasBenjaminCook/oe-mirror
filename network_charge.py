@@ -20,3 +20,5 @@ def calculate_local_price(datetime: dt.datetime):
             return PEAK_CHARGE
         else:
             return OFFPEAK_CHARGE
+    else:
+        return OFFPEAK_CHARGE
